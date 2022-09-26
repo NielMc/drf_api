@@ -9,12 +9,12 @@ class Profile(models.Model):
     name = models.CharField(max_length=255, blank=True)
     content = models.TextField(blank=True)
     image = models.ImageField(
-        upload_to='images/', default='../<ADD Your image name from cloudinary(don’t forget the hash)>', blank=True
+        upload_to='images/', default='../default_profile_byqtut', blank=True
     )
 
     class Meta:
         ordering = ['-created_at']
-        
+
     def __str__(self):
         return f"{self.owner}'s profile"
 
